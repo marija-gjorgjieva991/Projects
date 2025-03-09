@@ -1,0 +1,98 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.services {
+  @extend %wrap;
+  padding-top: var.$gutter-base;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: var.$gutter-base;
+  }
+
+  .first-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var.$gutter-base * 2;
+
+    @include mix.mobile-l-styles {
+      display: block;
+      padding: math.div(var.$gutter-base, 2);
+    }
+
+    img {
+      flex-basis: 40%;
+      height: 300px;
+      margin-right: var.$gutter-base * 2;
+
+      @include mix.tablet-styles {
+        margin-right: var.$gutter-base;
+      }
+
+      @include mix.mobile-l-styles {
+        flex-basis: 100%;
+      }
+    }
+
+    .content {
+      flex-basis: 60%;
+
+      @include mix.mobile-l-styles {
+        flex-basis: 100%;
+      }
+
+      h4 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .part-two {
+    @include mix.flex(33.33%, 33.33%, 100%);
+
+    padding: var.$gutter-base;
+
+    h4 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    img {
+      width: 400px;
+      object-fit: cover;
+      height: 300px;
+    }
+
+    img:hover {
+      transform: scale(0.6);
+      rotate: (-50deg);
+    }
+  }
+
+  .part-3 {
+    @extend %wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: var.$gutter-base;
+    }
+
+    button {
+      @extend %btn;
+      margin-bottom: var.$gutter-base;
+
+      a {
+        text-decoration: none;
+        color: var.$text-color-primary;
+      }
+    }
+  }
+}

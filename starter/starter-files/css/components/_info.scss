@@ -1,0 +1,204 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.info {
+  margin: 0 auto;
+  .wrap {
+    @extend %wrap;
+  }
+
+  @include mix.tablet-styles {
+    width: 90%;
+  }
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: var.$gutter-base * 2;
+  }
+
+  .flex-parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: -(var.$gutter-base);
+
+    .flex-item {
+      flex-basis: 33.33%;
+
+      @include mix.mobile-l-styles {
+        flex-basis: 100%;
+      }
+    }
+
+    .flex-inner {
+      margin-right: var.$gutter-base;
+    }
+
+    .package {
+      display: flex;
+      align-items: center;
+      margin: var.$gutter-base 0;
+
+      @include mix.mobile-l-styles {
+        flex-direction: column;
+      }
+
+      h5 {
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+        margin-bottom: 0;
+
+        span {
+          text-transform: none;
+        }
+      }
+
+      i {
+        color: #83e2a8;
+        font-size: 30px;
+        text-align: center;
+        margin-right: math.div(var.$gutter-base, 2);
+
+        @include mix.mobile-l-styles {
+          margin-bottom: var.$gutter-base;
+        }
+      }
+    }
+  }
+
+  hr {
+    margin-bottom: var.$gutter-base * 2;
+
+    @include mix.tablet-styles {
+      width: 50%;
+      margin: var.$gutter-base * 2 auto;
+    }
+  }
+
+  .carousel {
+    img {
+      @include mix.tablet-styles {
+        width: 50%;
+      }
+    }
+
+    .carousel-indicators {
+      button {
+        background-color: rgb(49, 46, 46);
+        border-radius: 50%;
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  .get-started {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+      text-align: center;
+    }
+    button {
+      @extend %btn;
+
+      a {
+        text-decoration: none;
+        color: var.$text-color-primary;
+      }
+    }
+  }
+
+  .mission-vision {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: -(var.$gutter-base);
+
+    @include mix.mobile-l-styles {
+      flex-direction: column;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .item {
+      flex-basis: 50%;
+      align-self: normal;
+
+      @include mix.mobile-l-styles {
+        flex-basis: 100%;
+      }
+    }
+
+    .inner {
+      margin-right: var.$gutter-base;
+    }
+
+    .box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+  }
+
+  .values-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: -(var.$gutter-base);
+    padding-bottom: var.$gutter-base * 2;
+
+    @include mix.mobile-l-styles {
+      flex-direction: column;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .values-item {
+      flex-basis: 33.33%;
+      align-self: normal;
+
+      @include mix.mobile-l-styles {
+        flex-basis: 100%;
+      }
+    }
+
+    .values-inner {
+      margin-right: var.$gutter-base;
+    }
+
+    .box2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h4 {
+        text-transform: uppercase;
+      }
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}

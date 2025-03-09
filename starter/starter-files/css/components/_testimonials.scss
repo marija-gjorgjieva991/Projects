@@ -1,0 +1,87 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use "sass:math";
+
+.client {
+  background-image: url("../../assets/pictures/testimonials/testimonial-background.jpg");
+  padding: (var.$gutter-base * 2) 0;
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: var.$gutter-base * 2;
+  }
+
+  .flex {
+    @include mix.flex(50%, 50%, 100%);
+    @extend %wrap;
+
+    .flex-inner {
+      border-radius: 20px;
+
+      span {
+        text-transform: uppercase;
+      }
+    }
+
+    .p-big {
+      text-align: center;
+      height: 65%;
+      padding-bottom: math.div(var.$gutter-base, 2);
+    }
+
+    .testimonials {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: var.$gutter-base;
+
+      img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: var.$gutter-base;
+        object-fit: fill;
+      }
+
+      img:hover {
+        transform: scale(5);
+
+        @include mix.tablet-styles {
+          transform: scale(2.5);
+        }
+      }
+
+      .big-letters {
+        text-transform: capitalize;
+        font-style: italic;
+      }
+
+      p {
+        margin-bottom: auto;
+      }
+    }
+  }
+  .experience {
+    @extend %wrap;
+    padding: var.$gutter-base * 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: var.$gutter-base * 2;
+    }
+
+    button {
+      @extend %btn;
+
+      a {
+        text-decoration: none;
+        color: var.$text-color-primary;
+      }
+    }
+  }
+}
