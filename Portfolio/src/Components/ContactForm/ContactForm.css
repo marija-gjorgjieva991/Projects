@@ -1,0 +1,75 @@
+.form-container {
+  padding: 20px;
+  box-sizing: border-box;
+  flex-basis: 50%;
+}
+
+.form-part {
+  padding: 30px;
+  border: 4px solid rgb(154, 2, 133);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(220, 43, 226, 0.5);
+}
+
+.box {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.box h3 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.box:hover i {
+  color: white;
+}
+
+.box:hover h2 {
+  color: rgb(154, 2, 133);
+  font-size: 30px;
+}
+
+.box:hover h3 {
+  color: rgb(154, 2, 133);
+  font-size: 30px;
+}
+
+.box i {
+  color: rgb(154, 2, 133);
+  font-size: 40px;
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .form-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .form-part:hover {
+    transform: none;
+  }
+
+  .box i {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .box h1 {
+    font-size: 24px;
+  }
+
+  .box h3 {
+    font-size: 20px;
+  }
+
+  .box:hover h2 {
+    font-size: 25px;
+  }
+
+  .box:hover h3 {
+    font-size: 22px;
+  }
+}

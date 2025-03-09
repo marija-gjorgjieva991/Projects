@@ -1,0 +1,29 @@
+.projects-links {
+  padding: 30px;
+  height: 100%;
+}
+
+.projects-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.projects-ul li {
+  list-style: square;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  width: 80%;
+}
+
+.projects-ul li a {
+  color: rgb(154, 2, 133);
+}
+
+.projects-ul li a:hover {
+  text-decoration: underline;
+}

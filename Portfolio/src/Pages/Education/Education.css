@@ -1,0 +1,35 @@
+.education-container {
+  width: 70%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 4px solid rgb(154, 2, 133);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgba(237, 57, 237, 0.5);
+}
+
+.education-container h2 {
+  text-align: center;
+  color: rgb(154, 2, 133);
+  font-size: 2rem;
+}
+
+.education-item {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(154, 2, 133);
+  padding-bottom: 15px;
+}
+
+.education-item h2 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.education-item h4 {
+  font-size: 1.2rem;
+}
+
+.education-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
