@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Street ARTists</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="main.js" defer></script>
+  </head>
+
+  <body>
+    <section class="page" id="landingPage">
+      <h1 class="dark-color">Street ARTists</h1>
+      <hr />
+      <img src="./images/Logo.png" alt="Logo" class="logo" />
+      <div class="container-rectangle">
+        <div class="div-artist">
+          <a href="#artistHomePage">
+            <h1 class="dark-color">Join as Artist</h1></a
+          >
+          <select id="users" value="Choose" class="dark-color">
+            <option value="" disabled selected>Choose</option>
+          </select>
+        </div>
+        <div class="div-visitor">
+          <a href="#visitorHomePage">
+            <h1 class="light-color">Join as Visitor</h1>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="visitorHomePage">
+      <div class="sub-menu">
+        <div class="menu-items">
+          <a href="#landingPage"
+            ><img src="./images/Logo.png" alt="Logo-1" class="logo1"
+          /></a>
+          <h2 class="dark-color">Street Artists</h2>
+        </div>
+        <a href="#auctionPage"
+          ><img
+            src="./images/ant-design_home-filled@2x.png"
+            alt=""
+            class="law-icon"
+        /></a>
+      </div>
+      <hr />
+      <div class="bricks">
+        <img src="./images/Bricks.png" alt="Bricks" />
+        <div class="brick-div">
+          <h2 class="font-roboto">Looking for masterpiece?</h2>
+          <a href="#visitorListingPage"><button>Find one now!</button></a>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="slider1">
+          <a href="#visitorListingPage"
+            ><img src="./images/Rectangle 7.png" alt="Picture1"
+          /></a>
+          <a href="#visitorListingPage"
+            ><img src="./images/Rectangle 7 (2).png" alt="Picture2"
+          /></a>
+          <a href="#visitorListingPage"
+            ><img src="./images/Rectangle 7 (5).png" alt="Picture3"
+          /></a>
+        </div>
+
+        <div class="slider2">
+          <a href="#visitorListingPage"
+            ><img src="./images/Rectangle 7.png" alt="Picture1"
+          /></a>
+          <a href="#visitorListingPage"
+            ><img src="./images/Rectangle 7 (3).png" alt="Picture2"
+          /></a>
+          <a href="#visitorListingPage"
+            ><img src="./images/Rectangle 7 (5).png" alt="Picture3"
+          /></a>
+        </div>
+      </div>
+      <div class="carousel-container">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-item active">
+            <div class="carousel-1">
+              <div class="carousel-2">
+                <img src="./images/Ellipse 1.png" alt="Ellipse Image" />
+                <p class="light-color first-p">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div id="border"></div>
+              <p class="dark-color second-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-1">
+              <div class="carousel-2">
+                <img src="./images/Ellipse 1.png" alt="Ellipse Image" />
+                <p class="light-color first-p">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div id="border"></div>
+              <p class="dark-color second-p">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="carousel-1">
+              <div class="carousel-2">
+                <img src="./images/Ellipse 1.png" alt="Ellipse Image" />
+                <p class="light-color first-p">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+              </div>
+              <div id="border"></div>
+              <p class="dark-color second-p">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          &#10094;
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          &#10095;
+        </a>
+      </div>
+    </section>
+
+    <section class="page" id="visitorListingPage">
+      <div class="sub-menu">
+        <div class="menu-items">
+          <a href="#landingPage"
+            ><img src="./images/Logo.png" alt="Logo-1" class="logo1"
+          /></a>
+          <h2 class="dark-color">Street Artists</h2>
+        </div>
+        <a href="#auctionPage"
+          ><img
+            src="./images/ant-design_home-filled@2x.png"
+            alt=""
+            class="law-icon"
+        /></a>
+      </div>
+      <hr />
+      <div id="visitorItemsContainer" class="visitor-items-container"></div>
+      <img src="./images/Group 14.png" alt="filter-icon" class="filter-icon" />
+      <div id="filters-panel">
+        <div class="sub-menu light-background">
+          <div class="menu-items">
+            <a href="#landingPage"
+              ><img src="./images/Logo.png" alt="Logo-1" class="logo1"
+            /></a>
+            <h2 class="dark-color">Street Artists</h2>
+          </div>
+          <a href="#auctionPage"
+            ><img
+              src="./images/ant-design_home-filled@2x.png"
+              alt="Law-icon"
+              class="law-icon"
+          /></a>
+        </div>
+        <div class="filters-flex">
+          <h4>Filter by</h4>
+          <button id="close-filters" class="close-button">
+            <img src="./images/Group 19.png" alt="Close" />
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label for="title-input">By Item Title</label>
+          <input type="text" id="title-input" placeholder="Label" />
+        </div>
+        <hr />
+
+        <div class="filter-group">
+          <label for="artist-select">By Artist</label>
+          <select id="artist-select">
+            <option value="">Choose</option>
+          </select>
+        </div>
+        <hr />
+
+        <div class="filter-group">
+          <p>By Price</p>
+          <div class="filters-flex">
+            <div class="price-flex">
+              <label for="min-price">Min:</label>
+              <input type="number" id="min-price" placeholder="Label" />
+            </div>
+
+            <div class="price-flex">
+              <label for="max-price">Max:</label>
+              <input type="number" id="max-price" placeholder="Label" />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="filter-group">
+          <label for="item-type">By Type</label>
+          <select id="item-type"></select>
+        </div>
+
+        <button id="apply-filters" class="apply-button">
+          <img src="./images/Group 15.png" alt="Apply" />
+        </button>
+      </div>
+    </section>
+
+    <section class="page" id="artistHomePage">
+      <nav class="navbar navbar-expand-none sub-menu">
+        <div class="menu-items">
+          <a href="#landingPage"
+            ><img src="./images/Logo.png" alt="Logo-1" class="logo1"
+          /></a>
+          <h2 id="artistName"></h2>
+        </div>
+        <button
+          class="navbar-toggler hamb-btn"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 hamb-drop">
+            <li class="nav-item">
+              <a class="nav-link" href="#landingPage">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#artistItemsPage">Items</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#auctionPage">Auction</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <hr />
+      <div class="widgets">
+        <div class="widget-box">
+          <div class="widget-1">
+            <p>Total Items Sold</p>
+            <p id="total-items-sold"></p>
+          </div>
+
+          <div class="widget-2">
+            <p>Total Income</p>
+            <p id="total-income"></p>
+          </div>
+        </div>
+
+        <div class="widget-3">
+          <p>Live Auctioning Item</p>
+          <p id="auction-price">$1200</p>
+          <p>current bid</p>
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <p class="dark-color">Display my income for last</p>
+        <div class="btn-div">
+          <button class="btn-7">7 days</button>
+          <button class="btn-14">14 days</button>
+          <button class="btn-30">30 days</button>
+        </div>
+      </div>
+
+      <canvas id="myChart"></canvas>
+    </section>
+
+    <section class="page" id="artistItemsPage">
+      <nav class="navbar navbar-expand-none sub-menu">
+        <div class="menu-items">
+          <a href="#landingPage"
+            ><img src="./images/Logo.png" alt="Logo-1" class="logo1"
+          /></a>
+          <h2 id="artistName2"></h2>
+        </div>
+        <button
+          class="navbar-toggler hamb-btn"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0 hamb-drop">
+            <li class="nav-item">
+              <a class="nav-link" href="#landingPage">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#artistItemsPage">Items</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#auctionPage">Auction</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <hr />
+      <div class="page-background">
+        <div class="add-new-item">
+          <button id="add-new-item-btn">+ Add New Item</button>
+        </div>
+        <div id="items-container"></div>
+      </div>
+      <div id="artistAddNewItemPage">
+        <div class="panel">
+          <nav class="navbar navbar-expand-none sub-menu">
+            <div class="menu-items">
+              <a href="#landingPage"
+                ><img src="./images/Logo.png" alt="Logo-1" class="logo1"
+              /></a>
+              <h2 id="artistName3"></h2>
+            </div>
+            <button
+              class="navbar-toggler hamb-btn"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarTogglerDemo03"
+              aria-controls="navbarTogglerDemo03"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0 hamb-drop">
+                <li class="nav-item">
+                  <a class="nav-link" href="#landingPage">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#artistItemsPage">Items</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#auctionPage">Auction</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="form">
+            <div class="form-flex">
+              <h4 id="formHeading">Add New Item</h4>
+              <div class="form-flex-box">
+                <label for="published">Is published</label>
+                <input
+                  type="checkbox"
+                  id="published"
+                  name="published"
+                  checked
+                />
+              </div>
+            </div>
+            <form id="addItemForm">
+              <label for="itemTitle">Title</label>
+              <input type="text" id="itemTitle" required />
+
+              <label for="itemDescription">Description</label>
+              <textarea id="itemDescription" rows="3" required></textarea>
+              <div class="form-flex">
+                <div class="vertical-flex">
+                  <label for="itemType">Type</label>
+                  <input type="text" id="itemType" required />
+                </div>
+                <div class="vertical-flex">
+                  <label for="itemPrice">Price</label>
+                  <input type="number" id="itemPrice" required />
+                </div>
+              </div>
+              <label for="itemImageUrl">Image URL</label>
+              <input type="url" id="itemImageUrl" required />
+              <p>or</p>
+              <div class="camera">
+                <div class="vertical-flex">
+                  <a href="" id="captureImageBtn"
+                    ><i class="fa-solid fa-camera"></i
+                  ></a>
+                  <p>Take a snapshot</p>
+                </div>
+              </div>
+              <div class="form-flex">
+                <button type="submit" id="addItemButton" class="light-color">
+                  Add New Item
+                </button>
+                <button id="cancelButton">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+<div id="imageCapturePanel" class="image-capture-panel" style="display: none">
+  <nav class="navbar navbar-expand-none sub-menu">
+    <div class="menu-items">
+      <a href="#landingPage">
+        <img src="./images/Logo.png" alt="Logo-1" class="logo1" />
+      </a>
+      <h3 id="artistName4"></h3>
+    </div>
+    <button
+      class="navbar-toggler hamb-btn"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarTogglerDemo04"
+      aria-controls="navbarTogglerDemo04"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo04">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0 hamb-drop">
+        <li class="nav-item"><a class="nav-link" href="#landingPage">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#artistItemsPage">Items</a></li>
+        <li class="nav-item"><a class="nav-link" href="#auctionPage">Auction</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="panel-content">
+    <span class="close" id="closePanel">&times;</span>
+    <video id="video" width="100%" autoplay></video>
+    <button id="captureBtn"><i class="fa-solid fa-camera"></i></button>
+    <canvas id="canvas" width="400" height="500" style="display: none;"></canvas>
+    <img id="overlayImage" src="" alt="Captured Image" style="display: none; width: 90%; height: auto; pointer-events: none;" />
+    <button id="retakeBtn" style="display: none;">Retake Snapshot</button>
+  </div>
+</div>
+
+
+
+        <div id="artistAddNewItemPage" style="display: none">
+          <h2>Add/Edit Item</h2>
+          <input type="hidden" id="itemImage" value="" />
+          <img
+            id="itemImagePreview"
+            src="Image-preview"
+            alt="Item Image Preview"
+            style="display: none; width: 100%; height: auto"
+          />
+        </div>
+      </div>
+      <div id="confirmation-popup" class="popup">
+        <div class="popup-content">
+          <h2>Confirm Removal</h2>
+          <p>Are you sure you want to remove this item?</p>
+          <button id="confirm-remove">Confirm</button>
+          <button id="cancel-remove">Cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="auctionPage">
+      <div class="sub-menu">
+        <div class="menu-items">
+          <a href="#landingPage"
+            ><img src="./images/Logo.png" alt="Logo-1" class="logo1"
+          /></a>
+          <h3 class="dark-color">Street Artists</h3>
+        </div>
+        <img
+          src="./images/ant-design_home-filled@2x.png"
+          alt="Law-icon"
+          class="law-icon"
+        />
+      </div>
+      <div class="auction-design" id="auctionDesign">
+        <div class="border-auction">
+          <h2>Auction for <span id="itemTitle"></span></h2>
+          <img id="itemImage2" src="" alt="Item Image" />
+          <p id="itemDescription"></p>
+          <p>Current Bid: $<span id="currentBid"></span></p>
+          <input type="number" id="bidAmount" placeholder="Enter your bid" />
+          <button id="bidButton" disabled>Place Bid</button>
+          <p>Time Remaining: <span id="timer">02:00</span></p>
+          <div id="bidLog"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
