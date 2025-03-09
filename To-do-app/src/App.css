@@ -1,0 +1,98 @@
+body {
+  background-color: rgb(42, 42, 43);
+}
+
+.todo-app {
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 5px 5px 25px rgba(247, 244, 244, 0.2);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+input {
+  padding: 5px;
+  margin-top: 5px;
+  width: 250px;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 25px;
+  background-color: rgb(17, 246, 93);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-item {
+  background-color: rgb(90, 89, 89);
+  margin: 10px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+}
+
+.task-item h3 {
+  color: rgb(17, 246, 93);
+}
+
+.task-item button {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .todo-app {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .form input,
+  .form textarea,
+  .form select {
+    width: 80%;
+  }
+
+  .btn-add {
+    width: 100%;
+  }
+}
