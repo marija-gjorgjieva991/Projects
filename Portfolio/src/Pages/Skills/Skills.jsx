@@ -54,6 +54,11 @@ const Skills = () => {
         skillIcon={<i className="fa-brands fa-react"></i>}
         skillLevel={100}
       />
+      <Skill
+        skillName="Next.js"
+        skillIcon={<i className="fa-solid fa-hand-point-right"></i>}
+        skillLevel={100}
+      />
     </div>
   );
 };
