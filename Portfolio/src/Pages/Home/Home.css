@@ -10,7 +10,7 @@
   color: rgb(154, 2, 133);
 }
 
-.content h1 {
+.content button {
   width: 500px;
   padding: 20px;
   text-align: center;
@@ -26,20 +26,53 @@
   cursor: pointer;
 }
 
-.content h1:hover {
+.content button:hover {
   color: black;
   transform: scale(1.05);
   box-shadow: 0 10px 10px rgba(238, 103, 238, 0.884);
   background: linear-gradient(135deg, rgb(229, 118, 214), rgb(64, 1, 56));
 }
 
+.homepage {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s, color 0.3s;
+  padding: 20px;
+  text-align: center;
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
 img {
-  width: 500px;
-  height: 500px;
+  max-width: 250px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: top center;
+  margin-top: 20px;
   transition: transform 0.3s ease;
+}
+
+body.dark .homepage {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .content h2 {
+  color: #ffffff;
+}
+
+body.dark .theme-toggle {
+  background-color: #333;
+  color: #ffffff;
+}
+
+body.dark .theme-toggle:hover {
+  background-color: #444;
 }
 
 img:hover {
@@ -51,13 +84,19 @@ img:hover {
     flex-direction: column;
   }
 
-  .content h1 {
-    font-size: 24px;
+  .content {
+    width: 80%;
+  }
+
+  .content button {
     width: 300px;
   }
 
+  .content h1 {
+    font-size: 24px;
+  }
+
   .content h2 {
-    width: 300px;
     font-size: 20px;
   }
 

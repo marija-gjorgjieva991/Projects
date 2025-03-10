@@ -1,6 +1,5 @@
 .projects-links {
   padding: 30px;
-  height: 100%;
 }
 
 .projects-ul {
@@ -14,7 +13,7 @@
 
 .projects-ul li {
   list-style: square;
-  color: white;
+  color: rgb(161, 0, 140);
   font-size: 20px;
   padding: 10px;
   width: 80%;
@@ -26,4 +25,9 @@
 
 .projects-ul li a:hover {
   text-decoration: underline;
+}
+
+.projects-ul li h5 {
+  color: rgb(161, 0, 140);
+  font-weight: bold;
 }

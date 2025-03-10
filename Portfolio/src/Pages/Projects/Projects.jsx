@@ -6,7 +6,7 @@ const Projects = () => {
     <div className="projects-links">
       <ul className="projects-ul">
         <li>
-          <h3>Calculator application</h3>
+          <h5>Calculator application</h5>
           <Link
             to={"https://my-awesome-calculator-app.netlify.app/"}
             target="_blank"
@@ -15,13 +15,13 @@ const Projects = () => {
           </Link>
         </li>
         <li>
-          <h3>To-do application</h3>
+          <h5>To-do application</h5>
           <Link to={"https://my-todo-tasks-app.netlify.app/"} target="_blank">
             https://my-todo-tasks-app.netlify.app/
           </Link>
         </li>
         <li>
-          <h3>Movies application</h3>
+          <h5>Movies application</h5>
           <Link
             to={"https://my-awesome-movies-app.netlify.app/"}
             target="_blank"
@@ -30,7 +30,7 @@ const Projects = () => {
           </Link>
         </li>
         <li>
-          <h3>Street Artist Page - mobile version</h3>
+          <h5>Street Artist Page - mobile version</h5>
           <Link to={"https://street-artist-page.netlify.app/"} target="_blank">
             https://street-artist-page.netlify.app/
           </Link>

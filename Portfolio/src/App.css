@@ -4,9 +4,29 @@ img {
 }
 
 body {
-  background-color: black;
+  background-color: white;
 }
 
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h4,
+p {
+  color: black;
+}
+
+a {
+  color: black;
+}
+
+body.dark {
+  background-color: #121212;
+  color: white;
+}
+
+h3.dark {
+  color: white;
 }

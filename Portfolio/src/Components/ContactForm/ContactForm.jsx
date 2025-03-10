@@ -13,7 +13,7 @@ const ContactForm = () => {
 
   return (
     <div className="form-container">
-      <div className="form-part">
+      <div>
         <form>
           <div className="box">
             <i className="fa-solid fa-user"></i>

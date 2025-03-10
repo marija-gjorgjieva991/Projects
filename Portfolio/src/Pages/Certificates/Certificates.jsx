@@ -1,4 +1,6 @@
-import { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./Certificates.css";
 
 const certificates = [
@@ -11,43 +13,43 @@ const certificates = [
   { id: 7, title: "Certificate 7", imageUrl: "certificate7.jpg" },
   { id: 8, title: "Certificate 8", imageUrl: "certificate8.jpg" },
   { id: 9, title: "Certificate 9", imageUrl: "certificate9.jpg" },
-  { id: 9, title: "Certificate 10", imageUrl: "certificate10.jpg" },
+  { id: 10, title: "Certificate 10", imageUrl: "certificate10.jpg" },
 ];
 
 const Certificates = () => {
-  const [modalImage, setModalImage] = useState(null);
-
-  const openModal = (imageUrl) => {
-    setModalImage(imageUrl);
-  };
-
-  const closeModal = () => {
-    setModalImage(null);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div>
-      <h1>My Certificates</h1>
-
-      <section className="certificate-gallery">
+    <div className="certificates">
+      <Slider {...settings}>
         {certificates.map((certificate) => (
-          <div
-            className="certificate"
-            key={certificate.id}
-            onClick={() => openModal(certificate.imageUrl)}
-          >
+          <div key={certificate.id}>
             <img src={certificate.imageUrl} alt={certificate.title} />
           </div>
         ))}
-      </section>
-
-      {modalImage && (
-        <div className="modal" onClick={closeModal}>
-          <div className="modal-content">
-            <img src={modalImage} alt="Certificate Full" />
-          </div>
-        </div>
-      )}
+      </Slider>
     </div>
   );
 };
