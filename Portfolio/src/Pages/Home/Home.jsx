@@ -1,5 +1,6 @@
 import "./Home.css";
-import img from "../../assets/IMG_20231216_182041.jpg";
+import darkImg from "../../assets/Mypic.png";
+import lightImg from "../../assets/Whitepic.png";
 import PropTypes from "prop-types";
 
 const Home = ({ toggleTheme, darkMode }) => {
@@ -12,7 +13,7 @@ const Home = ({ toggleTheme, darkMode }) => {
         </button>
         <h2>Front-end Developer</h2>
       </div>
-      <img src={img} alt="Profile-picture" />
+      <img src={darkMode ? darkImg : lightImg} alt="Profile-picture" />
     </div>
   );
 };

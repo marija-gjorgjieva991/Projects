@@ -51,14 +51,12 @@
 }
 
 img {
-  max-width: 250px;
-  border-radius: 50%;
-  margin-top: 20px;
-  transition: transform 0.3s ease;
+  width: 500px;
+  height: 700px;
 }
 
 body.dark .homepage {
-  background-color: #121212;
+  background-color: #000000;
   color: #ffffff;
 }
 
@@ -73,10 +71,6 @@ body.dark .theme-toggle {
 
 body.dark .theme-toggle:hover {
   background-color: #444;
-}
-
-img:hover {
-  transform: scale(1.1);
 }
 
 @media screen and (max-width: 768px) {

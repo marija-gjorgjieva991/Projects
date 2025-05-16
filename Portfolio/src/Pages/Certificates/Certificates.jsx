@@ -1,55 +1,48 @@
-import Slider from "react-slick";
+import { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Certificates.css";
 
 const certificates = [
-  { id: 1, title: "Certificate 1", imageUrl: "certificate1.jpg" },
-  { id: 2, title: "Certificate 2", imageUrl: "certificate2.jpg" },
-  { id: 3, title: "Certificate 3", imageUrl: "certificate3.jpg" },
-  { id: 4, title: "Certificate 4", imageUrl: "certificate4.jpg" },
-  { id: 5, title: "Certificate 5", imageUrl: "certificate5.jpg" },
-  { id: 6, title: "Certificate 6", imageUrl: "certificate6.jpg" },
-  { id: 7, title: "Certificate 7", imageUrl: "certificate7.jpg" },
-  { id: 8, title: "Certificate 8", imageUrl: "certificate8.jpg" },
-  { id: 9, title: "Certificate 9", imageUrl: "certificate9.jpg" },
-  { id: 10, title: "Certificate 10", imageUrl: "certificate10.jpg" },
+  { id: 1, title: "HTML", imageUrl: "html.jpg" },
+  { id: 2, title: "CSS", imageUrl: "css.jpg" },
+  { id: 3, title: "SASS", imageUrl: "sass.jpg" },
+  { id: 4, title: "BOOTSTRAP", imageUrl: "bootstrap.jpg" },
+  { id: 5, title: "GIT", imageUrl: "git.jpg" },
+  { id: 6, title: "UX", imageUrl: "ux.jpg" },
+  { id: 7, title: "TYPESCRIPT", imageUrl: "typescript.jpg" },
+  { id: 7, title: "JAVASCRIPT", imageUrl: "javascript.jpg" },
+  { id: 8, title: "ASYNC JS", imageUrl: "asynchronous-javascript.jpg" },
+  { id: 9, title: "REACT", imageUrl: "react.jpg" },
+  { id: 10, title: "NEXT", imageUrl: "next.jpg" },
+  { id: 10, title: "LIVE HACKATHON", imageUrl: "LiveHackathon.jpg" },
+  { id: 10, title: "ONLINE HACKATHON", imageUrl: "OnlineHackathon.jpg" },
 ];
 
 const Certificates = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 425,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="certificates">
-      <Slider {...settings}>
+    <div>
+      <div className="certificates-grid">
         {certificates.map((certificate) => (
-          <div key={certificate.id}>
+          <div
+            key={certificate.id}
+            className="certificate-item"
+            onClick={() => setSelectedImage(certificate.imageUrl)}
+          >
             <img src={certificate.imageUrl} alt={certificate.title} />
+            <p>{certificate.title}</p>
           </div>
         ))}
-      </Slider>
+      </div>
+
+      {selectedImage && (
+        <div className="modal" onClick={() => setSelectedImage(null)}>
+          <span className="close">&times;</span>
+          <img src={selectedImage} className="modal-content" alt="Full-size" />
+        </div>
+      )}
     </div>
   );
 };
