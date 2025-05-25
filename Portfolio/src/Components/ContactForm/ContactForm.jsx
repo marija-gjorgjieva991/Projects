@@ -13,42 +13,40 @@ const ContactForm = () => {
 
   return (
     <div className="form-container">
-      <div>
-        <form>
-          <div className="box">
-            <i className="fa-solid fa-user"></i>
-            <Link to="/">
-              <h3>
-                {contact.name} {contact.surname}
-              </h3>
-            </Link>
-          </div>
+      <div className="contact-card">
+        <div className="contact-box">
+          <i className="fa-solid fa-user"></i>
+          <Link to="/">
+            <span>
+              {contact.name} {contact.surname}
+            </span>
+          </Link>
+        </div>
 
-          <div className="box">
-            <i className="fa-solid fa-location-dot"></i>
-            <Link
-              to={`https://www.google.com/maps?q=${contact.location}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h3>{contact.location}</h3>
-            </Link>
-          </div>
+        <div className="contact-box">
+          <i className="fa-solid fa-location-dot"></i>
+          <Link
+            to={`https://www.google.com/maps?q=${contact.location}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>{contact.location}</span>
+          </Link>
+        </div>
 
-          <div className="box">
-            <i className="fa-solid fa-phone"></i>
-            <Link to={`tel:${contact.phoneNumber}`}>
-              <h3>{contact.phoneNumber}</h3>
-            </Link>
-          </div>
+        <div className="contact-box">
+          <i className="fa-solid fa-phone"></i>
+          <Link to={`tel:${contact.phoneNumber}`}>
+            <span>{contact.phoneNumber}</span>
+          </Link>
+        </div>
 
-          <div className="box">
-            <i className="fa-solid fa-envelope"></i>
-            <Link to={`mailto:${contact.email}`}>
-              <h3>{contact.email}</h3>
-            </Link>
-          </div>
-        </form>
+        <div className="contact-box email-box">
+          <i className="fa-solid fa-envelope"></i>
+          <Link to={`mailto:${contact.email}`}>
+            <span>{contact.email}</span>
+          </Link>
+        </div>
       </div>
     </div>
   );

@@ -1,144 +1,112 @@
 nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg-secondary, #1e1e2f);
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.25);
   position: relative;
-}
-
-.name {
-  font-size: 30px;
-  font-weight: bold;
-  padding: 10px;
-  border-radius: 30px;
-  text-transform: uppercase;
-  background-color: rgb(85, 2, 74);
-  cursor: pointer;
+  z-index: 10;
 }
 
 .name a {
-  color: white;
-}
-
-@keyframes nameAnimation {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(238, 103, 238, 0.884);
-  }
-  50% {
-    transform: scale(1.05);
-    background-color: rgb(207, 5, 180);
-    box-shadow: 0 0 30px rgba(238, 103, 238, 0.9);
-  }
-  100% {
-    transform: scale(1);
-    background-color: rgb(229, 3, 199);
-    box-shadow: 0 0 15px rgba(238, 103, 238, 0.884);
-  }
-}
-
-.name {
-  animation: nameAnimation 5s ease-in-out infinite;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: rgb(203, 17, 178);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--color-primary, #a78bfa);
   text-decoration: none;
-  font-size: 24px;
-  padding: 15px;
+  letter-spacing: 2px;
+  user-select: none;
 }
 
-a.active {
-  color: rgb(154, 2, 133);
-  text-shadow: 0 10px 10px rgba(238, 103, 238, 0.884);
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
-hr {
-  border: 2px solid rgb(226, 43, 202);
-  margin: 0;
+.menu li a {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary, #ddd);
+  text-decoration: none;
+  padding: 0.5rem 0;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  color: var(--color-primary, #a78bfa);
+  border-bottom: 3px solid var(--color-primary, #a78bfa);
 }
 
 .hamburger {
   display: none;
-  cursor: pointer;
   flex-direction: column;
   gap: 5px;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  z-index: 100;
-  margin-right: 10px;
-}
-
-.bar:nth-child(2).open {
-  opacity: 0;
-}
-
-.bar:nth-child(3).open {
-  transform: rotate(-45deg);
+  cursor: pointer;
+  padding: 0.5rem;
+  user-select: none;
 }
 
 .bar {
-  width: 30px;
+  width: 26px;
   height: 3px;
-  background-color: rgb(180, 24, 159);
+  background-color: var(--color-primary, #a78bfa);
+  border-radius: 2px;
   transition: all 0.3s ease;
-  transform-origin: center;
+  transform-origin: left;
 }
 
-.bar.open {
+.bar.open:nth-child(1) {
   transform: rotate(45deg);
-  position: absolute;
+  position: relative;
+  top: 7px;
 }
 
-.bar:nth-child(2).open {
+.bar.open:nth-child(2) {
   opacity: 0;
 }
 
-.bar:nth-child(3).open {
+.bar.open:nth-child(3) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(4) {
   transform: rotate(-45deg);
+  position: relative;
+  bottom: 7px;
 }
 
 @media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: var(--bg-secondary, #1e1e2f);
+    flex-direction: column;
+    width: 200px;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .menu.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .menu li {
+    margin-bottom: 1rem;
+  }
+
   .hamburger {
     display: flex;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 75px;
-    left: -10px;
-    width: 100%;
-    background-color: #ebace9;
-    padding: 20px 0;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-    z-index: 999;
-  }
-
-  ul.open {
-    transform: translateX(0);
-  }
-
-  li {
-    text-align: center;
-  }
-
-  a {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  a.active {
-    text-shadow: none;
   }
 }

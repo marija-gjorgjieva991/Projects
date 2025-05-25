@@ -8,7 +8,6 @@ import Skills from "./Pages/Skills/Skills.jsx";
 import Contact from "./Pages/Contact/Contact.jsx";
 import Projects from "./Pages/Projects/Projects.jsx";
 import Certificates from "./Pages/Certificates/Certificates.jsx";
-import SocialLinks from "./Components/SocialLinks/SocialLinks.jsx";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -41,7 +40,6 @@ function App() {
   return (
     <>
       <Navbar />
-      <hr />
       <Routes>
         <Route
           path="/"
@@ -53,8 +51,6 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/certificates" element={<Certificates />} />
       </Routes>
-      <hr />
-      <SocialLinks />
     </>
   );
 }

@@ -1,36 +1,107 @@
 .education-container {
-  width: 70%;
-  margin: 30px auto;
-  padding: 20px;
-  border: 4px solid rgb(154, 2, 133);
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgba(237, 57, 237, 0.5);
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  font-family: "Poppins", sans-serif;
+  color: #e0e0e0;
+  background: transparent;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.25);
 }
 
 .education-container h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
   text-align: center;
-  color: rgb(154, 2, 133);
-  font-size: 2rem;
+  color: #7c3aed;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .education-item {
-  margin-bottom: 30px;
-  border-bottom: 1px solid rgb(154, 2, 133);
-  padding-bottom: 15px;
+  background-color: #1e1e2f;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3);
+  padding: 2.5rem 3rem;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  border-left: 6px solid #7c3aed;
 }
 
-.education-item h2 {
+.education-item:hover {
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.6);
+  transform: translateY(-6px);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.education-school {
   font-size: 1.5rem;
-  color: rgb(154, 2, 133);
+  font-weight: 800;
+  color: #a78bfa;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-.education-item h4 {
-  color: rgb(154, 2, 133);
-  font-size: 1.2rem;
+.education-degree {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #b5b3c6;
+  font-style: italic;
 }
 
-.education-item p {
+.education-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.education-years {
   font-size: 1rem;
-  color: #555;
+  font-weight: 500;
+  color: #d1c4e9;
+  white-space: nowrap;
+  background: #7c3aed;
+  color: #fff;
+  padding: 0.25rem 0.8rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(124, 58, 237, 0.5);
+  font-variant-numeric: tabular-nums;
+}
+
+.education-description {
+  font-size: 1.05rem;
   line-height: 1.6;
+  color: #bbb9d4;
+  margin-top: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
+@media (max-width: 600px) {
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-years {
+    margin-top: 0.5rem;
+  }
+
+  .education-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .education-item {
+    padding: 2rem 1.5rem;
+  }
 }

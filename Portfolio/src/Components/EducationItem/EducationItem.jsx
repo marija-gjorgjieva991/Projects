@@ -2,8 +2,8 @@ import "../../Pages/Education/Education.css";
 import PropTypes from "prop-types";
 
 const EducationItem = ({
-  degree,
   school,
+  degree,
   title,
   startYear,
   endYear,
@@ -11,13 +11,17 @@ const EducationItem = ({
 }) => {
   return (
     <div className="education-item">
-      <h2>{degree}</h2>
-      <h4>{school}</h4>
-      <h2>{title}</h2>
-      <p>
-        {startYear} - {endYear}
-      </p>
-      <p>{description}</p>
+      <div className="education-header">
+        <div>
+          <div className="education-school">{school}</div>
+          <div className="education-degree">{degree}</div>
+        </div>
+        <div className="education-years">
+          {startYear} - {endYear}
+        </div>
+      </div>
+      <div className="education-title">{title}</div>
+      <p className="education-description">{description}</p>
     </div>
   );
 };
